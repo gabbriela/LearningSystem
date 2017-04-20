@@ -1,9 +1,10 @@
+using System.Data.Entity;
 using LearningSystem.Data;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(LearningSystem.Web.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(LearningSystem.Web.App_Start.NinjectWebCommon), "Stop")]
 
-namespace LearningSystem.Web
+namespace LearningSystem.Web.App_Start
 {
     using System;
     using System.Web;
@@ -63,6 +64,7 @@ namespace LearningSystem.Web
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<DbContext>().To<LearningSystemDbContext>();
             kernel.Bind<ILearningSystemData>().To<LearningSystemData>();
         }        
     }

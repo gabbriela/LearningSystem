@@ -17,10 +17,7 @@ namespace LearningSystem.Web
         protected void Application_Start()
         {
             
-            Database.SetInitializer(
-                new MigrateDatabaseToLatestVersion<
-                    LearningSystemDbContext,
-                    DbMigrationsConfig>());
+            Database.SetInitializer( new MigrateDatabaseToLatestVersion<LearningSystemDbContext, DbMigrationsConfig>());
 
             ViewEngineConfig.ViewEngineReset();
             AreaRegistration.RegisterAllAreas();

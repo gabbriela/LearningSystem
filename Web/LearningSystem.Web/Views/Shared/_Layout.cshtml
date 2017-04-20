@@ -32,6 +32,7 @@
                 }
 
                 <ul class="nav navbar-nav navbar-left">
+                    <li>@Html.ActionLink("Learning System", "Index", "Home")</li>
                     <li>@Html.ActionLink("Discussion", "Discussion", "Certification")</li>
                 </ul>
 
@@ -43,7 +44,7 @@
         @Html.Partial("_Notifications")
         @RenderBody()
         <hr />
-        <footer>
+        <footer class="text-center">
             <p>&copy; @DateTime.Now.Year - Project Assignment for the ASP.NET MVC Course @@ SoftUni </p>
         </footer>
     </div>
