@@ -25,14 +25,20 @@
                 {
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Study for exam", "Sections", "Study")</li>
+                        <li>@Html.ActionLink("Study", "Sections", "Study")</li>
                         <li>@Html.ActionLink("Test", "Sections", "Test")</li>
                         <li>@Html.ActionLink("Statistic", "Statistics", "Certification")</li>
                     </ul>
                 }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>@Html.ActionLink("Learning System", "Index", "Home")</li>
+                    </ul>
+
+                }
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li>@Html.ActionLink("Learning System", "Index", "Home")</li>
                     <li>@Html.ActionLink("Discussion", "Discussion", "Certification")</li>
                 </ul>
 

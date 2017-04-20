@@ -8,6 +8,14 @@ namespace LearningSystem.Web
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            RegisterScriptBundles(bundles);
+            RegisterContentBundles(bundles);
+
+            BundleTable.EnableOptimizations = false;
+        }
+
+        private static void RegisterScriptBundles(BundleCollection bundles)
+        {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -22,10 +30,13 @@ namespace LearningSystem.Web
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
+        }
 
+        private static void RegisterContentBundles(BundleCollection bundles)
+        {
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-darky.css",
-                      "~/Content/site.css"));
+                     "~/Content/bootstrap-darky.css",
+                     "~/Content/site.css"));
         }
     }
 }

@@ -16,9 +16,12 @@
         <h3>
             Exam 98-361
         </h3>
-        <p>
-            <a href="#">Login</a> or <a href="#">Register</a> to get started.
-        </p>
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <p>
+                <a href="#">Login</a> or <a href="#">Register</a> to get started.
+            </p>
+        }
     </div>
     
     <p class="text-right"><a href="https://www.microsoft.com/en-us/learning/exam-98-361.aspx" class="btn btn btn-lg text-center" target="blank"> Microsoft Official Website</a>
