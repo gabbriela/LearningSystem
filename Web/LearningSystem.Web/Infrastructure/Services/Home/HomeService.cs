@@ -17,6 +17,7 @@ namespace LearningSystem.Web.Infrastructure.Services.Home
         {
             
         }
+
         public IList<MostVotedMaterialsViewModel> GetIndexViewModel(int count)
         {
             var indexViewModel = this.Data

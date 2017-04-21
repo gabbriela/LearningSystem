@@ -227,7 +227,9 @@
     <Compile Include="Infrastructure\Mapping\IMapFrom.cs" />
     <Compile Include="Infrastructure\Services\Base\BaseService.cs" />
     <Compile Include="Infrastructure\Services\Contracts\IHomeService.cs" />
+    <Compile Include="Infrastructure\Services\Contracts\IStudyService.cs" />
     <Compile Include="Infrastructure\Services\Home\HomeService.cs" />
+    <Compile Include="Infrastructure\Services\Study\StudyService.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\CommentViewModel.cs" />
     <Compile Include="ViewModels\Home\MostVotedMaterialsViewModel.cs" />
@@ -235,7 +237,7 @@
     <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\StudyMaterialInputModel.cs" />
-    <Compile Include="ViewModels\StudyMaterialViewModel.cs" />
+    <Compile Include="ViewModels\Study\StudyMaterialViewModel.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\Study\SectionsViewModel.cs" />
   </ItemGroup>
@@ -302,6 +304,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Study\Section.cshtml" />
     <Content Include="Views\StudyMaterial\Index.cshtml" />
+    <Content Include="Views\StudyMaterial\Details.cshtml" />
     <None Include="Views\Study\Sections.cshtml" />
   </ItemGroup>
   <ItemGroup>

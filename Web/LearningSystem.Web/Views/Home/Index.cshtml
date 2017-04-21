@@ -11,7 +11,7 @@
         <h1 style="font-size: 3.5em;">
             Microsoft Technology Associate
         </h1>
-        <p class="lead"> 
+        <p class="lead">
             Developer certification - Software Development Fundamentals
         </p>
         <h3>
@@ -19,13 +19,14 @@
         </h3>
         @if (!User.Identity.IsAuthenticated)
         {
-            <p>
-                <a href="#">Login</a> or <a href="#">Register</a> to get started.
-            </p>
+        <p>
+            <a href="#">Login</a> or <a href="#">Register</a> to get started.
+        </p>
         }
     </div>
-    
-    <p class="text-right"><a href="https://www.microsoft.com/en-us/learning/exam-98-361.aspx" class="btn btn btn-lg text-center" target="blank"> Microsoft Official Website</a>
+
+    <p class="text-right">
+        <a href="https://www.microsoft.com/en-us/learning/exam-98-361.aspx" class="btn btn btn-lg text-center" target="blank"> Microsoft Official Website</a>
     </p>
     <p class="text-right">
         <a href="https://www.microsoft.com/en-us/learning/exam-98-361.aspx" class="btn btn-primary btn"> Exam Details &raquo;</a>
@@ -33,5 +34,24 @@
     </p>
 </div>
 
+
+<div class="container">
+
+    <h2>Most popular study materials</h2>
+    <div class="row">
+        @for (int i = 0; i < Model.Count; i++)
+            {
+            <div class="col-md-3">
+                <h3>@Model[i].MaterialTitle</h3>
+                <div><strong>Section:</strong> @Model[i].SectionName</div>
+                <div><em>Author:</em> @Model[i].AuthorName</div>
+                <div><em>Votes: </em> @Model[i].NumberOfVotes</div>
+                <p>@Model[i].MaterialContent ...</p>
+                <a href="/StudyMaterial/Details/@Model[i].Id" class="btn btn-primary">Read more</a>
+            </div>
+        }
+    </div>
+
+</div>
 
 
