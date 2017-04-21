@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
 namespace LearningSystem.Web.Extensions
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Web.Mvc;
+     
     /*                                                                      *
      *      This extension was derive from Brad Christie's answer           *
      *      on StackOverflow.                                               *

@@ -1,4 +1,6 @@
-﻿namespace LearningSystem.Web.Controllers
+﻿using LearningSystem.Web.ViewModels;
+
+namespace LearningSystem.Web.Controllers
 {
     using System.Linq;
     using System.Threading.Tasks;
@@ -8,7 +10,7 @@
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
-    using LearningSystem.Web.Models;
+    using LearningSystem.Web.ViewModels;
 
     [Authorize]
     public class AccountController : Controller

@@ -44,8 +44,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+    <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Glimpse.Ado, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -222,13 +222,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\CommentViewModel.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
+    <Compile Include="Infrastructure\Mapping\IHaveCustomMappings.cs" />
+    <Compile Include="Infrastructure\Mapping\IMapFrom.cs" />
+    <Compile Include="Infrastructure\Services\Base\BaseService.cs" />
+    <Compile Include="Infrastructure\Services\Contracts\IHomeService.cs" />
+    <Compile Include="Infrastructure\Services\Home\HomeService.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\CommentViewModel.cs" />
+    <Compile Include="ViewModels\Home\MostVotedMaterialsViewModel.cs" />
+    <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
-    <Compile Include="Models\StudyMaterialInputModel.cs" />
-    <Compile Include="Models\StudyMaterialViewModel.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\StudyMaterialInputModel.cs" />
+    <Compile Include="ViewModels\StudyMaterialViewModel.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\Study\SectionsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\%2832%29.jpg" />

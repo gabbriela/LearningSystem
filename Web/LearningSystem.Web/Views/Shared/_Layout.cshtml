@@ -24,10 +24,13 @@
                 @if (Request.IsAuthenticated)
                 {
                     <ul class="nav navbar-nav">
+                        
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Study", "Sections", "Study")</li>
+                        <li>@Html.ActionLink("Study by section", "Sections", "Study")</li>
                         <li>@Html.ActionLink("Test", "Sections", "Test")</li>
                         <li>@Html.ActionLink("Statistic", "Statistics", "Certification")</li>
+                        <li>@Html.ActionLink("All materials", "AllMaterials", "StudyMaterial")</li>
+                        <li>@Html.ActionLink("Add study material", "AddMaterial", "StudyMaterial")</li>
                     </ul>
                 }
                 else
@@ -52,6 +55,7 @@
         <hr />
         <footer class="text-center">
             <p>&copy; @DateTime.Now.Year - Project Assignment for the ASP.NET MVC Course @@ SoftUni </p>
+            <p><a href="https://github.com/gabbriela/LearningSystem" target="blank">Project Source Code</a> </p>
         </footer>
     </div>
 

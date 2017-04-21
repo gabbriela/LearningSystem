@@ -3,39 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LearningSystem.Data;
 
 namespace LearningSystem.Web.Controllers
 {
-    public class StudyMaterialController : Controller
+    public class StudyMaterialController : BaseController
     {
+        public StudyMaterialController(ILearningSystemData data) : base(data)
+        {
+
+        }
+
         // GET: StudyMaterial
         public ActionResult Index()
         {
             return this.View();
         }
 
-        //public ActionResult Create(StudyMaterialInputModel model)
-        //{
-        //    if (model != null && this.ModelState.IsValid)
-        //    {
-        //        var section = this.db.Sections.FirstOrDefault();
-
-        //        var material = new StudyMaterial()
-        //        {
-        //            AuthorId = this.User.Identity.GetUserId(),
-        //            Title = model.Title,
-        //            Content = model.Content,
-        //            Section = section
-        //        };
-
-        //        db.StudyMaterials.Add(material);
-        //        db.SaveChanges();
-        //        this.AddNotification("Material created.", NotificationType.INFO);
-        //        return this.RedirectToAction("My");
-        //    }
-
-        //    return View(model);
-        //}
+        public ActionResult AddMaterial()
+        {
+            return this.View();
+        }
 
         //Edit study material
 

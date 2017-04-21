@@ -18,6 +18,7 @@ namespace LearningSystem.Web
         {
             
             Database.SetInitializer( new MigrateDatabaseToLatestVersion<LearningSystemDbContext, DbMigrationsConfig>());
+            AutoMapperConfig.Execute();
 
             ViewEngineConfig.ViewEngineReset();
             AreaRegistration.RegisterAllAreas();

@@ -26,5 +26,7 @@
         public const int StudyMaterialSourceMaxLength = 500;
 
         public const int UserFullNameMaxLength = 200;
+
+        public const int HomeIndexMaterialsCount = 4;
     }
 }

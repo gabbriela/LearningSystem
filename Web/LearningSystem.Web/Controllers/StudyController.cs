@@ -3,30 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LearningSystem.Data;
 
 namespace LearningSystem.Web.Controllers
 {
     public class StudyController : BaseController
     {
+        public StudyController(ILearningSystemData data) : base(data)
+        {
+
+        }
+
         // GET: Study
         public ActionResult Sections()
         {
-            var sections = this.db.Sections.ToList();
-
-            return View(sections);
+            
+            return View();
         }
 
         public ActionResult Section(int id)
         {
-            var sections = this.db.Sections.ToList();
-
+           
             return null; //View(sections);
         }
 
         public ActionResult Edit(int id)
         {
-            var sections = this.db.Sections.ToList();
-
+            
             return null; //View(sections);
         }
 
