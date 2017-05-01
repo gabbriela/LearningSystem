@@ -21,6 +21,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BAE4465B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningSystem.Common", "Common\LearningSystem.Common\LearningSystem.Common.csproj", "{E408CEFC-527A-45DA-829A-0F05FF9283C2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModels", "ViewModels", "{423EB60D-297A-4789-BDBC-BF7F4E90BBC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningSystem.Services", "Services\LearningSystem.Services\LearningSystem.Services.csproj", "{03B4B90F-3A41-4767-BECD-F0DD5C42B4AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningSystem.ViewModels", "ViewModels\LearningSystem.ViewModels\LearningSystem.ViewModels.csproj", "{F513144B-D04C-43A5-9E2B-65A37D6D3A6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +49,14 @@ Global
 		{E408CEFC-527A-45DA-829A-0F05FF9283C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E408CEFC-527A-45DA-829A-0F05FF9283C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E408CEFC-527A-45DA-829A-0F05FF9283C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B4B90F-3A41-4767-BECD-F0DD5C42B4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B4B90F-3A41-4767-BECD-F0DD5C42B4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B4B90F-3A41-4767-BECD-F0DD5C42B4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B4B90F-3A41-4767-BECD-F0DD5C42B4AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F513144B-D04C-43A5-9E2B-65A37D6D3A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F513144B-D04C-43A5-9E2B-65A37D6D3A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F513144B-D04C-43A5-9E2B-65A37D6D3A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F513144B-D04C-43A5-9E2B-65A37D6D3A6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +66,7 @@ Global
 		{EE854CAE-FA50-4429-905E-1942EF862D37} = {FADADE0D-B651-4463-A901-04FCC2293197}
 		{4616DD91-0D4A-4A88-8B98-D30F8C7EA0DF} = {FADADE0D-B651-4463-A901-04FCC2293197}
 		{E408CEFC-527A-45DA-829A-0F05FF9283C2} = {818F2F78-7F34-440C-8D76-E0CCBBAE2008}
+		{03B4B90F-3A41-4767-BECD-F0DD5C42B4AB} = {FD4A451A-9E56-45DA-83A7-06B6F41D53AE}
+		{F513144B-D04C-43A5-9E2B-65A37D6D3A6A} = {423EB60D-297A-4789-BDBC-BF7F4E90BBC3}
 	EndGlobalSection
 EndGlobal

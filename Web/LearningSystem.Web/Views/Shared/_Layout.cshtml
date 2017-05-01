@@ -21,15 +21,14 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse">
-                @if (Request.IsAuthenticated)
+                @if (User.Identity.IsAuthenticated)
                 {
                     <ul class="nav navbar-nav">
-                        
+
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Study by section", "Sections", "Study")</li>
-                        <li>@Html.ActionLink("Test", "Sections", "Test")</li>
+                        <li>@Html.ActionLink("Study", "AllMaterials", "StudyMaterial")</li>
+                        <li>@Html.ActionLink("Test", "Index", "Test")</li>
                         <li>@Html.ActionLink("Statistic", "Statistics", "Certification")</li>
-                        <li>@Html.ActionLink("All materials", "AllMaterials", "StudyMaterial")</li>
                         <li>@Html.ActionLink("Add study material", "AddMaterial", "StudyMaterial")</li>
                     </ul>
                 }

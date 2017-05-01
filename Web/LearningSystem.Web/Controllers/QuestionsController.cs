@@ -15,7 +15,7 @@ namespace LearningSystem.Web.Controllers
         }
 
         // GET: Questions
-        public ActionResult Index()
+        public ActionResult Add()
         {
             return this.View();
         }

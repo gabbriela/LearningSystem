@@ -1,0 +1,23 @@
+﻿@model IEnumerable<LearningSystem.ViewModels.Study.StudyMaterialViewModel>
+@{
+    ViewBag.Title = "Section";
+}
+
+<h2>All study materials in section @Model.FirstOrDefault().SectionName</h2>
+
+
+@foreach (var material in Model)
+{
+    <div class="row">
+        <div class="col-md-3">
+            <a href="/StudyMaterial/Details/@material.Id">@material.Title</a>
+        </div>
+        <div class="col-md-3">
+            Published by: @material.AuthorName
+        </div>
+        <div class="col-md-3">
+            Votes: @material.VotesCount
+        </div>
+    </div>
+
+}

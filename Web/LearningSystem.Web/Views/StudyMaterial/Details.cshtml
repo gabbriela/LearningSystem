@@ -1,9 +1,60 @@
-﻿@model LearningSystem.Web.ViewModels.Study.StudyMaterialViewModel
+﻿@model LearningSystem.ViewModels.Study.StudyMaterialViewModel
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = @Model.Title;
 }
 
-<h2>Details</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>@Model.Title</h2>
+        </div>
 
-<div>@Model.Title</div>
-<div>@Model.Content</div>
+        <br />
+
+        <div class="col-md-12">
+            
+            @if (Model.ImageId != null)
+            {
+                <p>@Model.ImageId</p>
+                <img src="@Url.Action("Image", "StudyMaterial", new {id = Model.ImageId.Value})" alt="@Model.Title"/>
+            }
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                Author: @Model.AuthorName
+            </div>
+
+            <div class="col-md-3">
+                Source: @Model.Source
+            </div>
+
+            <div class="col-md-3">
+                Section: @Model.SectionName
+            </div>
+        </div>
+
+        <br/> <br />
+
+        <div class="col-md-12">
+            <div>@Model.Content</div>
+        </div>
+
+        <br />
+
+        <div class="col-md-12">
+            Comments:
+        </div>
+        @if (@Model.Comments != null)
+        {
+             foreach (var comment in @Model.Comments)
+             {
+                 <div class="col-md-2">@comment.AuthorName: </div>
+                <div class="col-md-10">@comment.Content</div>
+            }
+        }
+
+    </div>
+</div>
+

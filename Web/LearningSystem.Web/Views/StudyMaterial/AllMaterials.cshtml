@@ -1,0 +1,35 @@
+﻿@model IEnumerable<LearningSystem.ViewModels.Study.AllMaterialsViewModel>
+@{
+    ViewBag.Title = "AllMaterials";
+}
+
+<h2>All study materials</h2>
+
+<div class="row">
+    <div class="col-md-9">
+    </div>
+    <div class="col-md-3">
+        <a href="/StudyMaterial/AllSections">Study materials by section</a>
+    </div>
+</div>
+
+<br/>
+
+@foreach (var material in Model)
+{
+    <div class="row">
+        <div class="col-md-3">
+            <a href="/StudyMaterial/Details/@material.Id">@material.Title</a>
+        </div>
+        <div class="col-md-3">
+            Section: <a href="/StudyMaterial/Details/@material.Id">@material.SectionName</a>
+        </div>
+        <div class="col-md-3">
+            Published by: @material.AuthorName
+        </div>
+        <div class="col-md-3">
+            Votes: @material.VotesCount
+        </div>
+    </div>
+
+}

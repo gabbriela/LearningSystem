@@ -1,0 +1,39 @@
+﻿@model LearningSystem.ViewModels.Study.AddMaterialViewModel
+@{
+    ViewBag.Title = "Add new Material";
+}
+
+<h2>AddMaterial</h2>
+
+@using (Html.BeginForm("AddMaterial", "StudyMaterial", FormMethod.Post, new { @class = "form", enctype="multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+    
+    @Html.EditorFor(m => m.Title)
+    @Html.EditorFor(m => m.SectionId, new { ListItem = Model.Sections })
+    @Html.EditorFor(m => m.Source)
+    @Html.EditorFor(m => m.Description)
+    @Html.EditorFor(m => m.Content)
+
+    <div class="row">
+        <div class="col-md-3">
+            <strong>Image</strong>
+        </div>
+        <div class="col-md-5">
+            <input type="file" name="UploadedImage" />
+        </div>
+    </div>
+
+    <br/> <br/>
+
+    <div class="row">
+        <div class="col-md-9 col-md-offset-2">
+            <input type="submit" class="btn btn-default" />
+        </div>
+    </div>
+    
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

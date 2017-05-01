@@ -1,8 +1,9 @@
 using System.Data.Entity;
 using LearningSystem.Data;
-using LearningSystem.Web.Infrastructure.Services.Contracts;
-using LearningSystem.Web.Infrastructure.Services.Home;
-using LearningSystem.Web.Infrastructure.Services.Study;
+using LearningSystem.Services;
+using LearningSystem.Services.Home;
+using LearningSystem.Services.Infrastructure.Contracts;
+using LearningSystem.Services.Study;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(LearningSystem.Web.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(LearningSystem.Web.App_Start.NinjectWebCommon), "Stop")]
@@ -72,6 +73,7 @@ namespace LearningSystem.Web.App_Start
 
             kernel.Bind<IHomeService>().To<HomeService>();
             kernel.Bind<IStudyService>().To<StudyService>();
+            kernel.Bind<ICommentService>().To<CommentService>();
         }        
     }
 }

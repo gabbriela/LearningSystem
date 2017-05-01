@@ -4,9 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LearningSystem.Data;
-using LearningSystem.Web.ViewModels.Home;
 using AutoMapper.QueryableExtensions;
-using LearningSystem.Web.Infrastructure.Services.Contracts;
+using LearningSystem.Services.Infrastructure.Contracts;
 
 namespace LearningSystem.Web.Controllers
 {

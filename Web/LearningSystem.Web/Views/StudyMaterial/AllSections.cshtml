@@ -1,0 +1,18 @@
+﻿@model IEnumerable<LearningSystem.ViewModels.Study.AllSectionsViewModel>
+
+@{
+    ViewBag.Title = "AllSections";
+}
+
+<h2>All Sections</h2>
+
+@foreach (var sec in Model)
+{
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <a href="/StudyMaterial/Section/@sec.Id">@sec.Title</a>
+        </div>
+    </div>
+    
+}

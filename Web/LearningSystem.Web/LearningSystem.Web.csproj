@@ -209,12 +209,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\ViewEngineConfig.cs" />
-    <Compile Include="Controllers\User\AccountController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CertificationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\User\ManageController.cs" />
-    <Compile Include="Controllers\StudyController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StudyMaterialController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Extensions\NotificationExtensions.cs" />
@@ -222,24 +221,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="App_Start\AutoMapperConfig.cs" />
-    <Compile Include="Infrastructure\Mapping\IHaveCustomMappings.cs" />
-    <Compile Include="Infrastructure\Mapping\IMapFrom.cs" />
-    <Compile Include="Infrastructure\Services\Base\BaseService.cs" />
-    <Compile Include="Infrastructure\Services\Contracts\IHomeService.cs" />
-    <Compile Include="Infrastructure\Services\Contracts\IStudyService.cs" />
-    <Compile Include="Infrastructure\Services\Home\HomeService.cs" />
-    <Compile Include="Infrastructure\Services\Study\StudyService.cs" />
-    <Compile Include="ViewModels\AccountViewModels.cs" />
-    <Compile Include="ViewModels\CommentViewModel.cs" />
-    <Compile Include="ViewModels\Home\MostVotedMaterialsViewModel.cs" />
-    <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
-    <Compile Include="ViewModels\RegisterViewModel.cs" />
-    <Compile Include="ViewModels\StudyMaterialInputModel.cs" />
-    <Compile Include="ViewModels\Study\StudyMaterialViewModel.cs" />
+    <Compile Include="Infrastructure\Populators\SectionPopulator.cs" />
+    <Compile Include="Infrastructure\Security\Encrypt.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\Study\SectionsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\%2832%29.jpg" />
@@ -302,16 +287,23 @@
     <Content Include="Views\Certification\_Comments.cshtml" />
     <Content Include="Views\Shared\_Notifications.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Study\Section.cshtml" />
     <Content Include="Views\StudyMaterial\Index.cshtml" />
     <Content Include="Views\StudyMaterial\Details.cshtml" />
-    <None Include="Views\Study\Sections.cshtml" />
+    <Content Include="Views\StudyMaterial\AllMaterials.cshtml" />
+    <Content Include="Views\StudyMaterial\AddMaterial.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DropDownList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\SingleLineText.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\MultiLineText.cshtml" />
+    <Content Include="Views\StudyMaterial\AllSections.cshtml" />
+    <Content Include="Views\StudyMaterial\Section.cshtml" />
+    <Content Include="Views\Test\Sections.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+    <Folder Include="ViewModels\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Questions\" />
-    <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -328,6 +320,14 @@
     <ProjectReference Include="..\..\Data\LearningSystem.Models\LearningSystem.Models.csproj">
       <Project>{4616DD91-0D4A-4A88-8B98-D30F8C7EA0DF}</Project>
       <Name>LearningSystem.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\LearningSystem.Services\LearningSystem.Services.csproj">
+      <Project>{03B4B90F-3A41-4767-BECD-F0DD5C42B4AB}</Project>
+      <Name>LearningSystem.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ViewModels\LearningSystem.ViewModels\LearningSystem.ViewModels.csproj">
+      <Project>{F513144B-D04C-43A5-9E2B-65A37D6D3A6A}</Project>
+      <Name>LearningSystem.ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
