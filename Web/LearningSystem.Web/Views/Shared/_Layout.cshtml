@@ -30,6 +30,7 @@
                         <li>@Html.ActionLink("Test", "Index", "Test")</li>
                         <li>@Html.ActionLink("Statistic", "Statistics", "Certification")</li>
                         <li>@Html.ActionLink("Add study material", "AddMaterial", "StudyMaterial")</li>
+
                     </ul>
                 }
                 else
@@ -43,6 +44,28 @@
                 <ul class="nav navbar-nav navbar-left">
                     <li>@Html.ActionLink("Discussion", "Discussion", "Certification")</li>
                 </ul>
+
+                @if (User.Identity.IsAuthenticated && User.IsInRole(GlobalConstants.AdminRole))
+                {
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" >
+                                    Administration
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Comments", "Index", "Comments", new { area = "Administration" }, null)</li>
+                                    <li>@Html.ActionLink("Comments", "Index", "Comments", new { area = "Administration" }, null)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    
+
+                }
+
 
                 @Html.Partial("_LoginPartial")
             </div>

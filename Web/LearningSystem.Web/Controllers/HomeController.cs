@@ -18,8 +18,7 @@ namespace LearningSystem.Web.Controllers
         {
             this.homeService = homeService;
         }
-
-        [OutputCache(Duration = 60 * 60)]
+        
         public ActionResult Index()
         {
             return View(homeService.GetIndexViewModel(4));

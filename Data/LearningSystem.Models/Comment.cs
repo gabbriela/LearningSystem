@@ -25,8 +25,7 @@
         public virtual User Author { get; set; }
 
         public int StudyMaterialId { get; set; }
-
-        [Required]
+        
         public StudyMaterial StudyMaterial { get; set; }
     }
 }

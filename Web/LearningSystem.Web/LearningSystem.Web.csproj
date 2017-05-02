@@ -209,6 +209,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\ViewEngineConfig.cs" />
+    <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Administration\Controllers\CommentsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CertificationController.cs" />
@@ -238,6 +241,14 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Administration\Views\web.config" />
+    <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Administration\Views\Comments\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\Comments\Delete.cshtml" />
+    <Content Include="Areas\Administration\Views\Comments\Details.cshtml" />
+    <Content Include="Areas\Administration\Views\Comments\Edit.cshtml" />
+    <Content Include="Areas\Administration\Views\Comments\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -303,6 +314,8 @@
     <Content Include="Views\Comments\_CommentPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\Administration\Models\" />
+    <Folder Include="Areas\Administration\Views\Admin\" />
     <Folder Include="Properties\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Questions\" />
@@ -315,6 +328,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\LearningSystem.Common\LearningSystem.Common.csproj">
+      <Project>{e408cefc-527a-45da-829a-0f05ff9283c2}</Project>
+      <Name>LearningSystem.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Data\LearningSystem.Data\LearningSystem.Data.csproj">
       <Project>{EE854CAE-FA50-4429-905E-1942EF862D37}</Project>
       <Name>LearningSystem.Data</Name>

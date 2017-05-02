@@ -28,5 +28,7 @@
         public const int UserFullNameMaxLength = 200;
 
         public const int HomeIndexMaterialsCount = 4;
+
+        public const string AdminRole = "Administrator";
     }
 }
