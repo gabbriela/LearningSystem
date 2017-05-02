@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
-using LearningSystem.Models;
-using LearningSystem.ViewModels.Comments;
-using LearningSystem.ViewModels.Infrastructure.Mapping;
-
-namespace LearningSystem.ViewModels.Study
+﻿namespace LearningSystem.ViewModels.Study
 {
+    using System;
+    using System.Collections.Generic;
+    using AutoMapper;
+    using LearningSystem.Models;
+    using LearningSystem.ViewModels.Comments;
+    using LearningSystem.ViewModels.Infrastructure.Mapping;
+
     public class StudyMaterialViewModel : IMapFrom<StudyMaterial>, IHaveCustomMappings
     {
         public int Id { get; set; }
@@ -23,9 +22,7 @@ namespace LearningSystem.ViewModels.Study
         public string SectionName { get; set; }
 
         public string AuthorName { get; set; }
-
-        //public ICollection<Comment> Comments;
-
+        
         public int VotesCount;
 
         public int? ImageId { get; set; }

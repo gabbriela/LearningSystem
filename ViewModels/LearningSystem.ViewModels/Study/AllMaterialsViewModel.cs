@@ -1,11 +1,11 @@
-﻿using System;
-using AutoMapper;
-using LearningSystem.Models;
-using LearningSystem.ViewModels.Infrastructure.Mapping;
-
-namespace LearningSystem.ViewModels.Study
+﻿namespace LearningSystem.ViewModels.Study
 {
-    public class AllMaterialsViewModel :IMapFrom<StudyMaterial>, IHaveCustomMappings
+    using System;
+    using AutoMapper;
+    using LearningSystem.Models;
+    using LearningSystem.ViewModels.Infrastructure.Mapping;
+
+    public class AllMaterialsViewModel : IMapFrom<StudyMaterial>, IHaveCustomMappings
     {
         public int Id { get; set; }
 
@@ -17,7 +17,6 @@ namespace LearningSystem.ViewModels.Study
 
         public string AuthorName { get; set; }
         
-
         public int VotesCount;
         
         public void CreateMappings(IConfiguration configuration)

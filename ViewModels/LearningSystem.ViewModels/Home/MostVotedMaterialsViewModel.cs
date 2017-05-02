@@ -1,10 +1,10 @@
-﻿using System.Linq;
-using AutoMapper;
-using LearningSystem.Models;
-using LearningSystem.ViewModels.Infrastructure.Mapping;
-
-namespace LearningSystem.ViewModels.Home
+﻿namespace LearningSystem.ViewModels.Home
 {
+    using System.Linq;
+    using AutoMapper;
+    using LearningSystem.Models;
+    using LearningSystem.ViewModels.Infrastructure.Mapping;
+
     public class MostVotedMaterialsViewModel : IMapFrom<StudyMaterial>, IHaveCustomMappings
     {
         public int Id { get; set; }

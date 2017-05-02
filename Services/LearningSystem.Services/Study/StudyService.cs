@@ -1,20 +1,19 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AutoMapper.QueryableExtensions;
-using LearningSystem.Data;
-using LearningSystem.Services.Base;
-using LearningSystem.Services.Infrastructure.Contracts;
-using LearningSystem.ViewModels.Comments;
-using LearningSystem.ViewModels.Study;
-
-namespace LearningSystem.Services.Study
+﻿namespace LearningSystem.Services.Study
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using AutoMapper.QueryableExtensions;
+    using LearningSystem.Data;
+    using LearningSystem.Services.Base;
+    using LearningSystem.Services.Infrastructure.Contracts;
+    using LearningSystem.ViewModels.Comments;
+    using LearningSystem.ViewModels.Study;
+
     public class StudyService : BaseService, IStudyService
     {
         public StudyService(ILearningSystemData data) 
             : base(data)
         {
-
         }
 
         public StudyMaterialViewModel GetStudyMaterialViewModel(int id)

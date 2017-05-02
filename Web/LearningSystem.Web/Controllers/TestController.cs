@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using LearningSystem.Data;
-using LearningSystem.Services.Infrastructure.Contracts;
-
-namespace LearningSystem.Web.Controllers
+﻿namespace LearningSystem.Web.Controllers
 {
+    using System.Web.Mvc;
+    using LearningSystem.Data;
+    using LearningSystem.Services.Infrastructure.Contracts;
+
     public class TestController : BaseController
     {
-
         private IStudyService studyService;
 
         public TestController(ILearningSystemData data, IStudyService studyService) 
@@ -26,6 +21,5 @@ namespace LearningSystem.Web.Controllers
 
             return View(allSections);
         }
-        
     }
 }

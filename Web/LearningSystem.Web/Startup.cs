@@ -1,9 +1,11 @@
 ﻿using Microsoft.Owin;
-using Owin;
 
-[assembly: OwinStartupAttribute(typeof(LearningSystem.Web.Startup))]
+[assembly: OwinStartup(typeof(LearningSystem.Web.Startup))]
+
 namespace LearningSystem.Web
 {
+    using Owin;
+
     public partial class Startup
     {
         public void Configuration(IAppBuilder app)

@@ -11,7 +11,6 @@ namespace LearningSystem.Web.Controllers
     {
         public QuestionsController(ILearningSystemData data) : base(data)
         {
-            
         }
 
         // GET: Questions

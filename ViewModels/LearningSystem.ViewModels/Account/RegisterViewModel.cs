@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace LearningSystem.ViewModels.Account
+﻿namespace LearningSystem.ViewModels.Account
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class RegisterViewModel
     {
         [Required]
@@ -24,5 +24,4 @@ namespace LearningSystem.ViewModels.Account
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
-
 }

@@ -22,7 +22,6 @@ namespace LearningSystem.Web.Extensions
             { "Info",       "App.Notifications.Info" }
         };
 
-
         public static void AddNotification(this ControllerBase controller, String message, String notificationType)
         {
             string NotificationKey = getNotificationKeyByType(notificationType);
@@ -62,6 +61,5 @@ namespace LearningSystem.Web.Extensions
         public const string WARNING = "Warning";
         public const string SUCCESS = "Success";
         public const string INFO = "Info";
-
     }
 }

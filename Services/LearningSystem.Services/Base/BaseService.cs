@@ -1,14 +1,14 @@
-﻿using LearningSystem.Data;
-
-namespace LearningSystem.Services.Base
+﻿namespace LearningSystem.Services.Base
 {
+    using LearningSystem.Data;
+
     public abstract class BaseService
     {
-        protected ILearningSystemData Data { get; private set; }
-
         public BaseService(ILearningSystemData data)
         {
             this.Data = data;
         }
+
+        protected ILearningSystemData Data { get; private set; }
     }
 }

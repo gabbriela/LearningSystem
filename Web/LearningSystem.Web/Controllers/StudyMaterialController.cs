@@ -83,7 +83,6 @@ namespace LearningSystem.Web.Controllers
                                 FileExtension = fileExtension
                             }
                         };
-
                     }
                 }
 
@@ -154,20 +153,5 @@ namespace LearningSystem.Web.Controllers
 
             return View(studyMaterialsBySection);
         }
-
-        //[Authorize]
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult  PostComment( )
-        //{
-            
-
-        //    return View();
-        //}
-
-
-        //Edit study material
-
-        //list study materials from given section
     }
 }

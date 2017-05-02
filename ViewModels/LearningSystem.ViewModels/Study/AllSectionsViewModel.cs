@@ -1,17 +1,15 @@
-﻿using AutoMapper;
-using LearningSystem.Models;
-using LearningSystem.ViewModels.Infrastructure.Mapping;
-
-namespace LearningSystem.ViewModels.Study
+﻿namespace LearningSystem.ViewModels.Study
 {
+    using AutoMapper;
+    using LearningSystem.Models;
+    using LearningSystem.ViewModels.Infrastructure.Mapping;
+
     public class AllSectionsViewModel : IMapFrom<Section>, IHaveCustomMappings
     {
-
         public int Id { get; set; }
 
         public string Title { get; set; }
-
-
+        
         public void CreateMappings(IConfiguration configuration)
         {
             configuration.CreateMap<Section, AllSectionsViewModel>()

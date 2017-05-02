@@ -8,16 +8,12 @@ namespace LearningSystem.Web.Controllers
         public CertificationController(ILearningSystemData data)
             :base(data)
         {
-            
         }
 
         // GET: Certification
         public ActionResult Index()
         {
-            
-
             return View();
         }
-        
     }
 }

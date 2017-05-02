@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace LearningSystem.ViewModels.Account
+﻿namespace LearningSystem.ViewModels.Account
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
@@ -18,8 +18,11 @@ namespace LearningSystem.ViewModels.Account
     public class SendCodeViewModel
     {
         public string SelectedProvider { get; set; }
+
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
+
         public string ReturnUrl { get; set; }
+
         public bool RememberMe { get; set; }
     }
 
@@ -31,11 +34,12 @@ namespace LearningSystem.ViewModels.Account
         [Required]
         [Display(Name = "Code")]
         public string Code { get; set; }
-        public string ReturnUrl { get; set; }
 
+        public string ReturnUrl { get; set; }
+        
         [Display(Name = "Remember this browser?")]
         public bool RememberBrowser { get; set; }
-
+        
         public bool RememberMe { get; set; }
     }
 
@@ -61,7 +65,6 @@ namespace LearningSystem.ViewModels.Account
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
-
     
     public class ResetPasswordViewModel
     {

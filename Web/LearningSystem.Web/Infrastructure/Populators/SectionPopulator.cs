@@ -7,6 +7,5 @@ namespace LearningSystem.Web.Infrastructure.Populators
 {
     public class SectionPopulator
     {
-         
     }
 }

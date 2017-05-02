@@ -35,9 +35,7 @@ namespace LearningSystem.Web.Controllers
                 this.Data.SaveChanges();
 
                 var viewModel = Mapper.Map<CommentViewModel>(dbComment);
-
                 
-
                 return PartialView("_CommentPartial", viewModel);
             }
 

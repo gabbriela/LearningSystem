@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using LearningSystem.ViewModels.Comments;
-using LearningSystem.ViewModels.Study;
-
-namespace LearningSystem.Services.Infrastructure.Contracts
+﻿namespace LearningSystem.Services.Infrastructure.Contracts
 {
+    using System.Collections.Generic;
+    using LearningSystem.ViewModels.Comments;
+    using LearningSystem.ViewModels.Study;
+
     public interface IStudyService
     {
         StudyMaterialViewModel GetStudyMaterialViewModel(int id);

@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using AutoMapper;
-using LearningSystem.ViewModels.Infrastructure.Mapping;
-
-namespace LearningSystem.ViewModels
+﻿namespace LearningSystem.ViewModels
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using AutoMapper;
+    using LearningSystem.ViewModels.Infrastructure.Mapping;
+
     public static class AutoMapperConfig
     {
         public static void Execute()
@@ -54,4 +54,3 @@ namespace LearningSystem.ViewModels
         }
     }
 }
-

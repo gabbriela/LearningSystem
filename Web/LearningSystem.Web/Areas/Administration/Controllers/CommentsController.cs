@@ -17,7 +17,6 @@ namespace LearningSystem.Web.Areas.Administration.Controllers
             : base(data)
         {
         }
-
         
         public ActionResult Index()
         {
@@ -29,7 +28,6 @@ namespace LearningSystem.Web.Areas.Administration.Controllers
             return View(comments.ToList());
         }
         
-
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -43,9 +41,9 @@ namespace LearningSystem.Web.Areas.Administration.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(comment);
         }
-
         
         public ActionResult Edit(int? id)
         {
@@ -63,7 +61,6 @@ namespace LearningSystem.Web.Areas.Administration.Controllers
 
             return View(comment);
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -94,10 +91,10 @@ namespace LearningSystem.Web.Areas.Administration.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(comment);
         }
         
-
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -113,8 +110,8 @@ namespace LearningSystem.Web.Areas.Administration.Controllers
             {
                 this.Data.Context.Dispose();
             }
+
             base.Dispose(disposing);
         }
-
     }
 }

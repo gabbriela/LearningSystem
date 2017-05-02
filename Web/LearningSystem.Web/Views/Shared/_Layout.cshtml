@@ -25,24 +25,24 @@
                 {
                     <ul class="nav navbar-nav">
 
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Study", "AllMaterials", "StudyMaterial")</li>
-                        <li>@Html.ActionLink("Test", "Index", "Test")</li>
-                        <li>@Html.ActionLink("Statistic", "Statistics", "Certification")</li>
-                        <li>@Html.ActionLink("Add study material", "AddMaterial", "StudyMaterial")</li>
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)</li>
+                        <li>@Html.ActionLink("Study", "AllMaterials", "StudyMaterial", new { area = string.Empty }, null)</li>
+                        <li>@Html.ActionLink("Test", "Index", "Test", new { area = string.Empty }, null)</li>
+                        <li>@Html.ActionLink("Statistic", "Statistics", "Certification", new { area = string.Empty }, null)</li>
+                        <li>@Html.ActionLink("Add study material", "AddMaterial", "StudyMaterial", new { area = string.Empty }, null)</li>
 
                     </ul>
                 }
                 else
                 {
                     <ul class="nav navbar-nav navbar-left">
-                        <li>@Html.ActionLink("Learning System", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Learning System", "Index", "Home", new { area = string.Empty }, null)</li>
                     </ul>
 
                 }
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li>@Html.ActionLink("Discussion", "Discussion", "Certification")</li>
+                    <li>@Html.ActionLink("Discussion", "Discussion", "Certification", new { area = string.Empty }, null)</li>
                 </ul>
 
                 @if (User.Identity.IsAuthenticated && User.IsInRole(GlobalConstants.AdminRole))
@@ -55,15 +55,15 @@
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li>@Html.ActionLink("Comments", "Index", "Comments", new { area = "Administration" }, null)</li>
-                                    <li>@Html.ActionLink("Comments", "Index", "Comments", new { area = "Administration" }, null)</li>
+                                    <li class="dropdown-header">Edit</li>
+                                    <li>@Html.ActionLink("Materials", "Index", "Comments", new { area = "Administration" }, null)</li>
+                                    <li>@Html.ActionLink("Comments", "Index", "Comments", new {area = "Administration"}, null)</li>
                                 </ul>
                             </div>
                         </li>
                         
                     </ul>
                     
-
                 }
 
 

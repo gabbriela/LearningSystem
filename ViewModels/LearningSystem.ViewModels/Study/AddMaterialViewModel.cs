@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-using LearningSystem.Common;
-using LearningSystem.Models;
-using LearningSystem.ViewModels.Infrastructure.Mapping;
-
-namespace LearningSystem.ViewModels.Study
+﻿namespace LearningSystem.ViewModels.Study
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
+    using System.Web.Mvc;
+    using LearningSystem.Common;
+    using LearningSystem.Models;
+    using LearningSystem.ViewModels.Infrastructure.Mapping;
+
     public class AddMaterialViewModel : IMapFrom<StudyMaterial>
     {
         [Required]
