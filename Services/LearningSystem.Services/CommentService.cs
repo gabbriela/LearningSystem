@@ -24,6 +24,7 @@ namespace LearningSystem.Services
                 .Comments
                 .All()
                 .Where(c => c.StudyMaterialId == projectId)
+                .OrderByDescending(c => c.Id)
                 .Project()
                 .To<CommentViewModel>()
                 .ToList();

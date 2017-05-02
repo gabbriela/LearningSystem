@@ -212,6 +212,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CertificationController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StudyMaterialController.cs" />
@@ -298,10 +299,11 @@
     <Content Include="Views\StudyMaterial\Section.cshtml" />
     <Content Include="Views\Test\Sections.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Shared\_PostCommentPartial.cshtml" />
+    <Content Include="Views\Comments\_CommentPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Questions\" />
   </ItemGroup>

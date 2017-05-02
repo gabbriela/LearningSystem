@@ -1,4 +1,5 @@
-﻿@model LearningSystem.ViewModels.Study.StudyMaterialViewModel
+﻿@using LearningSystem.ViewModels.Comments
+@model LearningSystem.ViewModels.Study.StudyMaterialViewModel
 @{
     ViewBag.Title = @Model.Title;
 }
@@ -44,17 +45,32 @@
         <br />
 
         <div class="col-md-12">
-            Comments:
-        </div>
-        @if (@Model.Comments != null)
-        {
-             foreach (var comment in @Model.Comments)
-             {
-                 <div class="col-md-2">@comment.AuthorName: </div>
-                <div class="col-md-10">@comment.Content</div>
+            @if (User.Identity.IsAuthenticated)
+            {
+               @Html.Partial("_PostCommentPartial", new PostCommentViewModel(Model.Id))
+                
             }
-        }
+        </div>
+
+        <div class="col-md-12">
+                Comments:
+         </div>
+
+        <div id="comments">
+            
+            @foreach (var comment in @Model.Comments)
+            {
+                @Html.Partial("../Comments/_CommentPartial", comment)
+            }
+        </div>
+               
 
     </div>
 </div>
 
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryajax")
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+}

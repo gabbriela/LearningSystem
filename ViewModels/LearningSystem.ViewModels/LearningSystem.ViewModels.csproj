@@ -100,6 +100,7 @@
   <ItemGroup>
     <Compile Include="Account\AccountViewModels.cs" />
     <Compile Include="Comments\CommentViewModel.cs" />
+    <Compile Include="Comments\PostCommentViewModel.cs" />
     <Compile Include="Infrastructure\AutoMapperConfig.cs" />
     <Compile Include="Home\MostVotedMaterialsViewModel.cs" />
     <Compile Include="Infrastructure\Mapping\IHaveCustomMappings.cs" />

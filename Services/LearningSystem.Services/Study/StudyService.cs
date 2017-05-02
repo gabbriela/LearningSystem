@@ -23,6 +23,7 @@ namespace LearningSystem.Services.Study
                 .StudyMaterials
                 .All()
                 .Where(m => m.Id == id)
+                .OrderBy(m => m.Id)
                 .Project()
                 .To<StudyMaterialViewModel>()
                 .FirstOrDefault();
@@ -35,7 +36,6 @@ namespace LearningSystem.Services.Study
             var studyMaterialById = this.Data
                 .StudyMaterials
                 .All()
-                .OrderByDescending(m => m.Votes.Count())
                 .Project()
                 .To<AllMaterialsViewModel>()
                 .ToList();
