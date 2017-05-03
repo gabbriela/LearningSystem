@@ -3,8 +3,9 @@
     ViewBag.Title = "Section";
 }
 
-<h2>All study materials in section @Model.FirstOrDefault().SectionName</h2>
-
+<div class="page-header">
+    <h2>All study materials in section @Model.FirstOrDefault().SectionName</h2>
+</div>
 
 @foreach (var material in Model)
 {

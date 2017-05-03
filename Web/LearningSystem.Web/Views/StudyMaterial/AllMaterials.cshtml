@@ -3,13 +3,16 @@
     ViewBag.Title = "AllMaterials";
 }
 
-<h2>All study materials</h2>
+<div class="page-header">
+    <h2>All study materials</h2>
+</div>
+
 
 <div class="row">
     <div class="col-md-9">
     </div>
     <div class="col-md-3">
-        <a href="/StudyMaterial/AllSections">Study materials by section</a>
+        <a href="/StudyMaterial/AllSections" class="btn btn-info">Study materials by section</a>
     </div>
 </div>
 
@@ -27,7 +30,7 @@
         <div class="col-md-3">
             Published by: @material.AuthorName
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             Votes: @material.VotesCount
         </div>
     </div>

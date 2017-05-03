@@ -3,7 +3,10 @@
     ViewBag.Title = "Add new Material";
 }
 
-<h2>AddMaterial</h2>
+<div class="page-header">
+    <h2>AddMaterial</h2>
+</div>
+
 
 @using (Html.BeginForm("AddMaterial", "StudyMaterial", FormMethod.Post, new { @class = "form", enctype="multipart/form-data"}))
 {
