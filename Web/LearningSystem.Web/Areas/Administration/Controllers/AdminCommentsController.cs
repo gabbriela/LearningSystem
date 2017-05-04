@@ -13,9 +13,9 @@ using LearningSystem.Models;
 namespace LearningSystem.Web.Areas.Administration.Controllers
 {
     [Authorize(Roles = GlobalConstants.AdminRole)]
-    public class CommentsController : AdminController
+    public class AdminCommentsController : AdminController
     {
-        public CommentsController(ILearningSystemData data) 
+        public AdminCommentsController(ILearningSystemData data) 
             : base(data)
         {
         }

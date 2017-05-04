@@ -29,7 +29,6 @@
                         <li>@Html.ActionLink("Study", "AllMaterials", "StudyMaterial", new { area = string.Empty }, null)</li>
                         <li>@Html.ActionLink("Questions", "Index", "Questions", new { area = string.Empty }, null)</li>
                         <li>@Html.ActionLink("Statistic", "Statistic", "Test", new { area = string.Empty }, null)</li>
-                        <li>@Html.ActionLink("Add study material", "AddMaterial", "StudyMaterial", new { area = string.Empty }, null)</li>
                         <li>@Html.ActionLink("Contacts", "Contact", "Home", new { area = string.Empty }, null)</li>
                     </ul>
                 }
@@ -56,8 +55,8 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-header">Edit</li>
-                                    <li>@Html.ActionLink("Materials", "Index", "StudyMaterials", new { area = "Administration" }, null)</li>
-                                    <li>@Html.ActionLink("Comments", "Index", "Comments", new {area = "Administration"}, null)</li>
+                                    <li>@Html.ActionLink("Materials", "Index", "AdminMaterials", new { area = "Administration" }, null)</li>
+                                    <li>@Html.ActionLink("Comments", "Index", "AdminComments", new {area = "Administration"}, null)</li>
                                 </ul>
                             </div>
                         </li>

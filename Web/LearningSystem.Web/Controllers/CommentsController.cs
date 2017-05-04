@@ -10,7 +10,6 @@ using LearningSystem.ViewModels.Comments;
 
 namespace LearningSystem.Web.Controllers
 {
-    [RoutePrefix("comment")]
     public class CommentsController : BaseController
     {
         public CommentsController(ILearningSystemData data) 
@@ -20,7 +19,6 @@ namespace LearningSystem.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[NonAction]
         public ActionResult PostComment(PostCommentViewModel model)
         {
             if (model != null && ModelState.IsValid)

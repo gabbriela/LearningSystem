@@ -19,6 +19,7 @@ namespace LearningSystem.Web.Controllers
             this.studyService = studyService;
         }
 
+        [Authorize]
         [Route("questions/section/{id:int}")]
         public ActionResult Section(int id)
         {
@@ -27,6 +28,7 @@ namespace LearningSystem.Web.Controllers
             return View(questionsBySection);
         }
 
+        [Authorize]
         [Route("questions/sections")]
         public ActionResult Index()
         {

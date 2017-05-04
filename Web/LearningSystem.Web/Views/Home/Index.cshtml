@@ -1,4 +1,5 @@
 ﻿
+@using LearningSystem.ViewModels.Home
 @model IList<LearningSystem.ViewModels.Home.MostVotedMaterialsViewModel>
 @{
     ViewBag.Title = "Home Page";
@@ -38,15 +39,15 @@
 
     <h2>Most popular study materials</h2>
     <div class="row">
-        @for (int i = 0; i < Model.Count; i++)
-            {
+        @foreach (var t in Model)
+        {
             <div class="col-md-3">
-                <h3>@Model[i].MaterialTitle</h3>
-                <div><strong>Section:</strong> @Model[i].SectionName</div>
-                <div><em>Author:</em> @Model[i].AuthorName</div>
-                <div><em>Votes: </em> @Model[i].NumberOfVotes</div>
-                <p>@Model[i].MaterialContent ...</p>
-                <a href="/StudyMaterial/Details/@Model[i].Id" class="btn btn-primary">Read more</a>
+                <h3>@t.MaterialTitle</h3>
+                <div><strong>Section:</strong> @t.SectionName</div>
+                <div><em>Author:</em> @t.AuthorName</div>
+                <div><em>Votes: </em> @t.NumberOfVotes</div>
+                <p>@t.MaterialContent ...</p>
+                <a href="/StudyMaterial/Details/@t.Id" class="btn btn-primary">Read more</a>
             </div>
         }
     </div>

@@ -13,7 +13,7 @@ using LearningSystem.Models;
 namespace LearningSystem.Web.Areas.Administration.Controllers
 {
     [Authorize(Roles = GlobalConstants.AdminRole)]
-    public class StudyMaterialsController : Controller
+    public class AdminMaterialsController : Controller
     {
         private LearningSystemDbContext db = new LearningSystemDbContext();
 

@@ -158,7 +158,7 @@ namespace LearningSystem.Web.Controllers
         }
 
         [Authorize]
-        [Route("section/material/{id:int}")]
+        [Route("section/{id:int}")]
         public ActionResult Section(int id)
         {
             var studyMaterialsBySection = studyService.GetStudyMaterialsBySection(id);
