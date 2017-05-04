@@ -24,11 +24,13 @@ namespace LearningSystem.Web.Controllers
             return View(homeService.GetIndexViewModel(4));
         }
 
+        [Route("contacts")]
         public ActionResult Contact()
         {
             return View();
         }
 
+        [Route("home/error")]
         public ActionResult Error()
         {
             return this.View();

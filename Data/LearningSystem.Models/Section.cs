@@ -20,6 +20,7 @@
 
         [Required]
         [MaxLength(GlobalConstants.SectionTitleMaxLength), MinLength(GlobalConstants.SectionTitleMinLength)]
+        [Display(Name = "Section")]
         public string Title { get; set; }
 
         public virtual ICollection<StudyMaterial> StudyMaterials

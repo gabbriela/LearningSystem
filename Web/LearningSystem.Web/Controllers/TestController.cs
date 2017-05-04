@@ -4,6 +4,7 @@
     using LearningSystem.Data;
     using LearningSystem.Services.Infrastructure.Contracts;
 
+    [RoutePrefix("test")]
     public class TestController : BaseController
     {
         private IStudyService studyService;
@@ -20,6 +21,12 @@
             var allSections = studyService.GetAllSections();
 
             return View(allSections);
+        }
+
+        [Route("statistic")]
+        public ActionResult Statistic()
+        {
+            return View();
         }
     }
 }

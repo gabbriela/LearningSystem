@@ -108,6 +108,8 @@
     <Compile Include="Account\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Account\RegisterViewModel.cs" />
+    <Compile Include="Questions\AnswerViewModel.cs" />
+    <Compile Include="Questions\QuestionViewModel.cs" />
     <Compile Include="Study\AddMaterialViewModel.cs" />
     <Compile Include="Study\AllMaterialsViewModel.cs" />
     <Compile Include="Study\AllSectionsViewModel.cs" />

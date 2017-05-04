@@ -6,11 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using LearningSystem.Common;
 using LearningSystem.Data;
 using LearningSystem.Models;
 
 namespace LearningSystem.Web.Areas.Administration.Controllers
 {
+    [Authorize(Roles = GlobalConstants.AdminRole)]
     public class CommentsController : AdminController
     {
         public CommentsController(ILearningSystemData data) 

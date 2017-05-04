@@ -3,17 +3,20 @@ using LearningSystem.Data;
 
 namespace LearningSystem.Web.Controllers
 {
+    [RoutePrefix("certificate")]
     public class CertificationController : BaseController
     {
         public CertificationController(ILearningSystemData data)
             :base(data)
         {
         }
-
-        // GET: Certification
-        public ActionResult Index()
+        
+        [Route("info")]
+        public ActionResult Info()
         {
             return View();
         }
+
+        
     }
 }

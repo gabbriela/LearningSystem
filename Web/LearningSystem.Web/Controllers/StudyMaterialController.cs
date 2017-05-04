@@ -14,6 +14,7 @@ using LearningSystem.ViewModels.Study;
 
 namespace LearningSystem.Web.Controllers
 {
+    [RoutePrefix("studymaterial")]
     public class StudyMaterialController : BaseController
     {
         private IStudyService studyService;
@@ -25,14 +26,15 @@ namespace LearningSystem.Web.Controllers
             this.studyService = studyService;
             this.commentService = commentService;
         }
+        
 
-        // GET: StudyMaterial
         public ActionResult Index()
         {
             return this.View();
         }
 
         [Authorize]
+        [Route("add-material")]
         public ActionResult AddMaterial()
         {
             var addMaterialViewModel = new AddMaterialViewModel()
@@ -52,6 +54,7 @@ namespace LearningSystem.Web.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("add-material")]
         public ActionResult AddMaterial(AddMaterialViewModel model)
         {
             if (model != null && ModelState.IsValid)
@@ -104,6 +107,8 @@ namespace LearningSystem.Web.Controllers
             return View(model);
         }
 
+        [Authorize]
+        [Route("details/{id:int}")]
         public ActionResult Details(int id)
         {
             var studyMaterialById = studyService.GetStudyMaterialViewModel(id);
@@ -120,6 +125,8 @@ namespace LearningSystem.Web.Controllers
             return this.View(studyMaterialById); 
         }
 
+        [Authorize]
+        [Route("all-materials")]
         public ActionResult AllMaterials()
         {
             //sorted by votes
@@ -128,6 +135,7 @@ namespace LearningSystem.Web.Controllers
             return this.View(allStudyMaterials);
         }
 
+        [NonAction]
         public ActionResult Image(int id)
         {
             var image = this.Data.Images.GetById(id);
@@ -140,6 +148,8 @@ namespace LearningSystem.Web.Controllers
             return File(image.Content, "image/" + image.FileExtension);
         }
 
+        [Authorize]
+        [Route("sections")]
         public ActionResult AllSections()
         {
             var allSections = studyService.GetAllSections();
@@ -147,6 +157,8 @@ namespace LearningSystem.Web.Controllers
             return View(allSections);
         }
 
+        [Authorize]
+        [Route("section/material/{id:int}")]
         public ActionResult Section(int id)
         {
             var studyMaterialsBySection = studyService.GetStudyMaterialsBySection(id);

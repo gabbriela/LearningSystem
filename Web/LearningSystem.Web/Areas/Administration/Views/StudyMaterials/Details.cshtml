@@ -1,0 +1,69 @@
+﻿@model LearningSystem.Models.StudyMaterial
+
+
+    <div>
+        <h4>StudyMaterial</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Author.FullName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Author.FullName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Section.Title)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Section.Title)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PublishDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PublishDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Source)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Source)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

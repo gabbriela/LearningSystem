@@ -48,9 +48,11 @@
     <Compile Include="CommentService.cs" />
     <Compile Include="Infrastructure\Contracts\ICommentService.cs" />
     <Compile Include="Infrastructure\Contracts\IHomeService.cs" />
+    <Compile Include="Infrastructure\Contracts\IQuestionsService.cs" />
     <Compile Include="Infrastructure\Contracts\IStudyService.cs" />
     <Compile Include="Home\HomeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Questions\QuestionService.cs" />
     <Compile Include="Study\StudyService.cs" />
   </ItemGroup>
   <ItemGroup>

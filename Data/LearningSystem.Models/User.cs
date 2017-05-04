@@ -21,6 +21,7 @@
 
         [Required]
         [MaxLength(GlobalConstants.UserFullNameMaxLength)]
+        [Display(Name = "User")]
         public string FullName { get; set; }
 
         public virtual ICollection<Comment> Comments

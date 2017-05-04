@@ -26,6 +26,7 @@
         [MaxLength(GlobalConstants.StudyMaterialTitleMaxLength), MinLength(GlobalConstants.StudyMaterialTitleMinLength)]
         public string Title { get; set; }
 
+        [Display(Name = "Publish date")]
         public DateTime PublishDate { get; set; }
 
         [Required]

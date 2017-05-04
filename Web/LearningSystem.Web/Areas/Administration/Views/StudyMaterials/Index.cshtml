@@ -1,0 +1,55 @@
+﻿@model IEnumerable<LearningSystem.Models.StudyMaterial>
+
+@{
+    ViewBag.Title = "Admin Panel";
+}
+
+
+<div class="row">
+
+    <div class="col-md-1">
+        @Html.DisplayNameFor(model => model.Author.FullName)
+    </div>
+    <div class="col-md-2">
+        @Html.DisplayNameFor(model => model.Section.Title)
+    </div>
+    <div class="col-md-2">
+        @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="col-md-1">
+        @Html.DisplayNameFor(model => model.PublishDate)
+    </div>
+    <div class="col-md-5">
+        @Html.DisplayNameFor(model => model.Content)
+    </div>
+    <div class="col-md-1">
+        Admin
+    </div>
+</div>
+<br/>
+
+@foreach (var item in Model) {
+    <div class="row">
+        <div class="col-md-1">
+            @Html.DisplayFor(modelItem => item.Author.FullName)
+        </div>
+        <div class="col-md-2">
+            @Html.DisplayFor(modelItem => item.Section.Title)
+        </div>
+        <div class="col-md-2">
+            @Html.DisplayFor(modelItem => item.Title)
+        </div>
+        <div class="col-md-1">
+            @Html.DisplayFor(modelItem => item.PublishDate)
+        </div>
+        <div class="col-md-5">
+            @Html.DisplayFor(modelItem => item.Content)
+        </div>
+        <div class="col-md-1">
+            @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
+            @Html.ActionLink("Details", "Details", new {id = item.Id}) |
+            @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+        </div>
+    </div>
+    <br/>
+}

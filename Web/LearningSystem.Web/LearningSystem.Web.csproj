@@ -212,6 +212,7 @@
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
     <Compile Include="Areas\Administration\Controllers\AdminController.cs" />
     <Compile Include="Areas\Administration\Controllers\CommentsController.cs" />
+    <Compile Include="Areas\Administration\Controllers\StudyMaterialsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CertificationController.cs" />
@@ -249,6 +250,11 @@
     <Content Include="Areas\Administration\Views\Comments\Details.cshtml" />
     <Content Include="Areas\Administration\Views\Comments\Edit.cshtml" />
     <Content Include="Areas\Administration\Views\Comments\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\StudyMaterials\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\StudyMaterials\Delete.cshtml" />
+    <Content Include="Areas\Administration\Views\StudyMaterials\Details.cshtml" />
+    <Content Include="Areas\Administration\Views\StudyMaterials\Edit.cshtml" />
+    <Content Include="Areas\Administration\Views\StudyMaterials\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -295,8 +301,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Certification\Index.cshtml" />
-    <Content Include="Views\Certification\_Comments.cshtml" />
     <Content Include="Views\Shared\_Notifications.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\StudyMaterial\Index.cshtml" />
@@ -312,13 +316,16 @@
     <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Shared\_PostCommentPartial.cshtml" />
     <Content Include="Views\Comments\_CommentPartial.cshtml" />
+    <Content Include="Views\Certification\Info.cshtml" />
+    <Content Include="Views\Questions\Section.cshtml" />
+    <Content Include="Views\Questions\Index.cshtml" />
+    <Content Include="Views\Test\Statistic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Administration\Models\" />
     <Folder Include="Areas\Administration\Views\Admin\" />
     <Folder Include="Properties\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\Questions\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

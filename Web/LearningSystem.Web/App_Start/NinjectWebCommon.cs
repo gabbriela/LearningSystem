@@ -3,6 +3,7 @@ using LearningSystem.Data;
 using LearningSystem.Services;
 using LearningSystem.Services.Home;
 using LearningSystem.Services.Infrastructure.Contracts;
+using LearningSystem.Services.Questions;
 using LearningSystem.Services.Study;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(LearningSystem.Web.App_Start.NinjectWebCommon), "Start")]
@@ -74,6 +75,8 @@ namespace LearningSystem.Web.App_Start
             kernel.Bind<IHomeService>().To<HomeService>();
             kernel.Bind<IStudyService>().To<StudyService>();
             kernel.Bind<ICommentService>().To<CommentService>();
+
+            kernel.Bind<IQuestionsService>().To<QuestionService>();
         }        
     }
 }

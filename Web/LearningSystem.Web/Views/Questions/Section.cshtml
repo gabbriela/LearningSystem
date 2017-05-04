@@ -1,0 +1,36 @@
+﻿@model System.Collections.Generic.IEnumerable<LearningSystem.ViewModels.Questions.QuestionViewModel>
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Questions</h2>
+
+<div class="row">
+    <div class="col-md-1"></div>
+
+    <div class="col-md-8">
+        @foreach (var question in Model)
+        {
+            <p>Question:</p>
+            <p>
+                @question.Content
+            </p>
+            <br />
+            <p>Answers:</p>
+
+            foreach (var answer in question.Answers)
+            {
+                <p>
+                    - @answer.Content  
+                    @if (answer.Correct == true)
+                    {
+                        <span class="text-success">TRUE</span>
+                    }
+                </p>
+            }
+            <br /> <br />
+        }
+    </div>
+   
+</div>

@@ -45,10 +45,11 @@
         <br />
 
         <div class="col-md-12">
+            <br/>
             @if (User.Identity.IsAuthenticated)
             {
-               @Html.Partial("_PostCommentPartial", new PostCommentViewModel(Model.Id))
-                
+                @Html.Partial("_PostCommentPartial", new PostCommentViewModel(Model.Id))
+
             }
         </div>
 
