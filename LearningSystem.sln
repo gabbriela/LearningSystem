@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningSystem.Services", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningSystem.ViewModels", "ViewModels\LearningSystem.ViewModels\LearningSystem.ViewModels.csproj", "{F513144B-D04C-43A5-9E2B-65A37D6D3A6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningSystem.UnitTests", "Tests\LearningSystem.UnitTests\LearningSystem.UnitTests.csproj", "{45BA6484-1D61-4CEF-8AB8-3DCC2A7E6E2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{F513144B-D04C-43A5-9E2B-65A37D6D3A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F513144B-D04C-43A5-9E2B-65A37D6D3A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F513144B-D04C-43A5-9E2B-65A37D6D3A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45BA6484-1D61-4CEF-8AB8-3DCC2A7E6E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45BA6484-1D61-4CEF-8AB8-3DCC2A7E6E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45BA6484-1D61-4CEF-8AB8-3DCC2A7E6E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45BA6484-1D61-4CEF-8AB8-3DCC2A7E6E2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,5 +74,6 @@ Global
 		{E408CEFC-527A-45DA-829A-0F05FF9283C2} = {818F2F78-7F34-440C-8D76-E0CCBBAE2008}
 		{03B4B90F-3A41-4767-BECD-F0DD5C42B4AB} = {FD4A451A-9E56-45DA-83A7-06B6F41D53AE}
 		{F513144B-D04C-43A5-9E2B-65A37D6D3A6A} = {423EB60D-297A-4789-BDBC-BF7F4E90BBC3}
+		{45BA6484-1D61-4CEF-8AB8-3DCC2A7E6E2E} = {BAE4465B-4610-40E4-92AD-BEA54FFF7EB4}
 	EndGlobalSection
 EndGlobal

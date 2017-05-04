@@ -21,8 +21,8 @@
 @foreach (var material in Model)
 {
     <div class="row">
-        <div class="col-md-3">
-            <a href="/StudyMaterial/Details/@material.Id">@material.Title</a>
+        <div class="col-md-3" >
+            <a href="/StudyMaterial/Details/@material.Id" style="text-decoration: none">@material.Title</a>
         </div>
         <div class="col-md-3">
             Section: <a href="/StudyMaterial/Details/@material.Id">@material.SectionName</a>

@@ -20,7 +20,7 @@
         public string Content { get; set; }
 
         [MaxLength(GlobalConstants.StudyMaterialDescriptionMaxLength)]
-        [UIHint("MultiLineText")]
+        [UIHint("SingleLineText")]
         public string Description { get; set; }
 
         [Required]

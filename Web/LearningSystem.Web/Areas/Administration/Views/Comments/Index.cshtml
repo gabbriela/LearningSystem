@@ -6,43 +6,45 @@
 
 <h2>Comment Admin Panel</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Author.FullName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StudyMaterial.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Content)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Date)
-        </th>
-        <th></th>
-    </tr>
+<div class="row">
 
+    <div class="col-md-2 title">
+        @Html.DisplayNameFor(model => model.Author.FullName)
+    </div>
+    <div class="col-md-2">
+        @Html.DisplayNameFor(model => model.StudyMaterial.Title)
+    </div>
+    <div class="col-md-4">
+        @Html.DisplayNameFor(model => model.Content)
+    </div>
+    <div class="col-md-2">
+        @Html.DisplayNameFor(model => model.Date)
+    </div>
+    <div class="col-md-2">
+        Admin panel
+    </div>
+</div>       
+<br />
 @foreach (var item in Model) {
-    <tr>
-        <td style="word-wrap: break-word">
+    <div class="row">
+        <div class="col-md-2" style="word-wrap: break-word">
             @Html.DisplayFor(modelItem => item.Author.FullName)
-        </td>
-        <td>
+        </div>
+        <div class="col-md-2">
             @Html.DisplayFor(modelItem => item.StudyMaterial.Title)
-        </td>
-        <td style="word-wrap: break-word">
+        </div>
+        <div class="col-md-4" style="word-wrap: break-word">
             @Html.DisplayFor(modelItem => item.Content)
-        </td>
-        <td>
+        </div>
+        <div class="col-md-2">
             @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
+        </div>
+        <div class="col-md-2">
+            @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
+            @Html.ActionLink("Details", "Details", new {id = item.Id}) |
+            @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+        </div>
+    </div>
+    <br />
 }
 
-</table>
